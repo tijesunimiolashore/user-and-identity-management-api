@@ -12,8 +12,8 @@ using user_and_identity_management_api.Models;
 namespace userandidentitymanagementapi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260210022440_Initial")]
-    partial class Initial
+    [Migration("20260223021338_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,29 +50,6 @@ namespace userandidentitymanagementapi.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "9d3782df-1bf8-4283-a1b8-9067163b6257",
-                            ConcurrencyStamp = "1",
-                            Name = "Admin",
-                            NormalizedName = "Admin"
-                        },
-                        new
-                        {
-                            Id = "1ab23043-6322-467e-a0cf-a34a53f3f47a",
-                            ConcurrencyStamp = "2",
-                            Name = "User",
-                            NormalizedName = "User"
-                        },
-                        new
-                        {
-                            Id = "f027ee6c-f5f0-4407-921b-497576aef22e",
-                            ConcurrencyStamp = "3",
-                            Name = "sdk",
-                            NormalizedName = "sdk"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

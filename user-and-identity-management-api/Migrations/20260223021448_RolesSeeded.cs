@@ -7,7 +7,7 @@
 namespace userandidentitymanagementapi.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class RolesSeeded : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,9 +17,9 @@ namespace userandidentitymanagementapi.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "1ab23043-6322-467e-a0cf-a34a53f3f47a", "2", "User", "User" },
-                    { "9d3782df-1bf8-4283-a1b8-9067163b6257", "1", "Admin", "Admin" },
-                    { "f027ee6c-f5f0-4407-921b-497576aef22e", "3", "sdk", "sdk" }
+                    { "049ecb6b-113f-4e73-be1b-6d147c15a272", "3", "HR", "HR" },
+                    { "4101fb24-6455-448c-8df5-f01d167733f6", "1", "Admin", "Admin" },
+                    { "cb3419ae-e117-4394-82d2-6e626a8f0110", "2", "User", "User" }
                 });
         }
 
@@ -29,17 +29,17 @@ namespace userandidentitymanagementapi.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "1ab23043-6322-467e-a0cf-a34a53f3f47a");
+                keyValue: "049ecb6b-113f-4e73-be1b-6d147c15a272");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "9d3782df-1bf8-4283-a1b8-9067163b6257");
+                keyValue: "4101fb24-6455-448c-8df5-f01d167733f6");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "f027ee6c-f5f0-4407-921b-497576aef22e");
+                keyValue: "cb3419ae-e117-4394-82d2-6e626a8f0110");
         }
     }
 }

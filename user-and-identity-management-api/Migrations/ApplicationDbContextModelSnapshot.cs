@@ -51,24 +51,24 @@ namespace userandidentitymanagementapi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9d3782df-1bf8-4283-a1b8-9067163b6257",
+                            Id = "4101fb24-6455-448c-8df5-f01d167733f6",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "1ab23043-6322-467e-a0cf-a34a53f3f47a",
+                            Id = "cb3419ae-e117-4394-82d2-6e626a8f0110",
                             ConcurrencyStamp = "2",
                             Name = "User",
                             NormalizedName = "User"
                         },
                         new
                         {
-                            Id = "f027ee6c-f5f0-4407-921b-497576aef22e",
+                            Id = "049ecb6b-113f-4e73-be1b-6d147c15a272",
                             ConcurrencyStamp = "3",
-                            Name = "sdk",
-                            NormalizedName = "sdk"
+                            Name = "HR",
+                            NormalizedName = "HR"
                         });
                 });
 

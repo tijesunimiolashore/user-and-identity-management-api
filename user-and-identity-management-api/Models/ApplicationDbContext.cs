@@ -22,7 +22,7 @@ namespace user_and_identity_management_api.Models
 			builder.Entity<IdentityRole>().HasData(
 				new IdentityRole { Name = "Admin", ConcurrencyStamp = "1", NormalizedName = "Admin" },
 				new IdentityRole { Name = "User", ConcurrencyStamp = "2", NormalizedName = "User" },
-				new IdentityRole { Name = "sdk", ConcurrencyStamp = "3", NormalizedName = "sdk" }
+				new IdentityRole { Name = "HR", ConcurrencyStamp = "3", NormalizedName = "HR" }
 			);
 		}
 	}
