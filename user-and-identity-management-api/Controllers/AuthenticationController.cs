@@ -47,20 +47,26 @@ namespace user_and_identity_management_api.Controllers
 			};
 
 			// 3. Add User to Database
-			var result = await _userManager.CreateAsync(user, registerUser.Password);
-			if (result.Succeeded)
+			if (await _roleManager.RoleExistsAsync(rule))
 			{
+
+				var result = await _userManager.CreateAsync(user, registerUser.Password);
+				if (!result.Succeeded)
+				{
+					return StatusCode(StatusCodes.Status201Created,
+						new Response { Status = "Success", Message = "User Failed to Create!" });
+				}
+
+				//Add role to the user
+				await _userManager.AddToRoleAsync(user, rule);
 				return StatusCode(StatusCodes.Status201Created,
-					new Response { Status = "Success", Message = "User Created Succesfully!" });
+						new Response { Status = "Success", Message = "User Created Successfully!" });
 			}
 			else
 			{
 				return StatusCode(StatusCodes.Status500InternalServerError,
-				new Response { Status = "Error", Message = "User Failed to Create!" });
+					new Response { Status = "Error", Message = "This Rule does not Exist!" });
 			}
-
-			// 4. Assign a Role
-		
 		}
 	}
 }
